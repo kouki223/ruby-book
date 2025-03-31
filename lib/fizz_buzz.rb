@@ -34,7 +34,20 @@ def fizz_buzz(n)
 end
 
 # テストを記載する
+# テストの簡単な手順
+# 1. Minitestなどのテスティングフレームワークを呼ぶ
+# 2. classをキャスパルケースで定義する
+# 3. クラス内にテスティングメソッドを定義する
 
+require 'minitest/autotun'
+
+class FizzBuzzTest < Minitest::Test
+  def tesu_fizz_buzz
+    assert_equal '1', fizz_buzz(1)
+    assert_equal '2', fizz_buzz(2)
+    assert_equal 'Fizz', fizz_buzz(3)
+  end
+end
 
 # puts fizz_buzz(1)
 # puts fizz_buzz(2)
